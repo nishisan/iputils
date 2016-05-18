@@ -153,6 +153,9 @@ LT_DLLOADERS =  dlopen.la
 LT_DLPREOPEN = -dlpreopen dlopen.la 
 MAKEINFO = ${SHELL} /app/encoder/home/iputils/missing --run makeinfo
 MKDIR_P = /bin/mkdir -p
+MYSQL_CONFIG_CFLAGS = -I/usr/include/mysql  -g -pipe -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -fno-strict-aliasing -fwrapv -fPIC   -DUNIV_LINUX -DUNIV_LINUX
+MYSQL_CONFIG_CPPFLAGS = -I/usr/include/mysql
+MYSQL_CONFIG_LIBS = -rdynamic -L/usr/lib64/mysql -lmysqlclient -lz -lcrypt -lnsl -lm -lssl -lcrypto
 NM = /usr/bin/nm -B
 NMEDIT = 
 OBJDUMP = objdump

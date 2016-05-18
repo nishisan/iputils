@@ -797,6 +797,9 @@ LTLIBOBJS
 subdirs
 POW_LIB
 LIB@&t@OBJS
+MYSQL_CONFIG_LIBS
+MYSQL_CONFIG_CPPFLAGS
+MYSQL_CONFIG_CFLAGS
 LTDLOPEN
 LT_CONFIG_H
 CONVENIENCE_LTDL_FALSE
@@ -13244,6 +13247,14 @@ LTDLOPEN=`eval "\\$ECHO \"$libname_spec\""`
 
 
 # Only expand once:
+
+
+
+MYSQL_CONFIG_CFLAGS=`mysql_config --cflags`
+MYSQL_CONFIG_CPPFLAGS=`mysql_config --include`
+MYSQL_CONFIG_LIBS=`mysql_config --libs`
+
+
 
 
 

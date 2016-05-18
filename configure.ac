@@ -12,6 +12,14 @@ LT_CONFIG_LTDL_DIR([libltdl])
 LT_INIT([dlopen])
 LTDL_INIT([recursive])
 
+MYSQL_CONFIG_CFLAGS=`mysql_config --cflags`
+MYSQL_CONFIG_CPPFLAGS=`mysql_config --include`
+MYSQL_CONFIG_LIBS=`mysql_config --libs`
+
+AC_SUBST([MYSQL_CONFIG_CFLAGS])
+AC_SUBST([MYSQL_CONFIG_CPPFLAGS])
+AC_SUBST([MYSQL_CONFIG_LIBS])
+
 # Checks for programs.
 #AC_PROG_CC
 
